@@ -13,7 +13,43 @@
 
 2. [Кластеризация и балансировка нагрузки](2.md)
 
-3. [Резервное копирование](3.md)
+# Домашнее задание к занятию 2 «Кластеризация и балансировка нагрузки»
+## Задание 1
+### Задание 1 — Балансировка Round-robin на 4 уровне (TCP)
 
-4. [Отказоустойчивость в облаке](4.md)
+**Конфигурационный файл :**
+
+```haproxy
+global
+    log /dev/log local0
+    chroot /var/lib/haproxy
+    stats socket /run/haproxy/admin.sock mode 660 level admin
+    user haproxy
+    group haproxy
+    daemon
+
+defaults
+    log global
+    timeout connect 5s
+    timeout client 30s
+    timeout server 30s
+
+frontend front
+    bind *:8088
+    mode tcp
+    default_backend web_servers
+
+backend web_servers
+    mode tcp
+    balance roundrobin
+    server s1 127.0.0.1:8888 check
+    server s2 127.0.0.1:9999 check
+```
+
+### Скриншоты
+
+
+4. [Резервное копирование](3.md)
+
+5. [Отказоустойчивость в облаке](4.md)
 
