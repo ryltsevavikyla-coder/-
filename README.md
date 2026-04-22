@@ -47,9 +47,9 @@ backend web_servers
 ```
 
 ### Скриншоты
-![скриншот 1]()
-![2](images/название-файла.png)
-![3](images/название-файла.png)
+![скриншот 1](https://github.com/ryltsevavikyla-coder/-/blob/main/Screenshot%202026-04-22%20144745.png)
+![2](https://github.com/ryltsevavikyla-coder/-/blob/main/Screenshot%202026-04-22%20144909.png)
+![3](https://github.com/ryltsevavikyla-coder/-/blob/main/Screenshot%202026-04-22%20144916.png)
 
 4. [Резервное копирование](3.md)
 
